@@ -1,0 +1,53 @@
+.thank-you-container {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.thank-you-container h1 {
+  padding: 20px;
+  font-size: 30px;
+}
+
+.download-container {
+  text-align: center;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.thank-you-container > h3 {
+  font-size: 15px;
+}
+
+.thank-you-sign-in {
+  border-color: gray;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  border-radius: 10px;
+  width: 41%;
+  margin:0 auto;
+}
+
+.thank-you-sign-in > .already-subscribed {
+  padding: 25px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(206, 46, 46);
+  background-color: rgb(255, 248, 248);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .download-container{
+    width: 70%;
+  }
+  .download-container > button {
+    width: 100%;
+  }
+  .thank-you-sign-in {
+    width: 90%;
+  }
+  .thank-you-container > h3 {
+    font-size: 18px;
+  }
+}

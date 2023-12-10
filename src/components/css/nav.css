@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Abel&display=swap");
+
+.menu{
+  display: flex;
+  justify-content: center;
+}
+
+#check {
+  display: none;
+}
+
+.button {
+  width: 48px;
+  height: 48px;
+  background: rgb(206, 46, 46);
+  padding: 12px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  padding-top: 8px;
+  line-height: 8px;
+  z-index: 201;
+}
+
+.button:hover {
+  background: #ff9d00;
+}
+
+.button span {
+  height: 3px;
+  width: 100%;
+  background: white;
+  display: inline-block;
+  transition: all 0.5s cubic-bezier(.62, .43, .35, 1.47);
+}
+
+
+/* toggle icon animation */
+#check:checked~.button span:nth-child(1) {
+  width: 100%;
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+#check:checked~.button span:nth-child(2) {
+  width: 0;
+}
+
+#check:checked~.button span:nth-child(3) {
+  width: 100%;
+  transform: rotate(-45deg) translateY(-0.5px) translateX(-0.5px);
+}
+
+
+/* the nav height is set to 0 when the navbar is closed */
+
+nav {
+  margin: 50px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(255,248,248, 0.5);
+  height: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0c1019;
+  display: block;
+  font-size: 18px;
+  transition: all 0.4s cubic-bezier(.22, .43, .35, 1.5);
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: top;
+  text-align: center;
+  border-bottom: 1px solid #b4ac97;
+}
+
+nav a:hover {
+  background: #ffdd7f;
+}
+
+/* the nav height will be set to the height in pixels that would have for default, using height:auto won't work but you can put that value in pixels creating the slide*/
+#check:checked~nav {
+  height: 144px;
+}
+
+#check:checked~nav a {
+  padding: 10px;
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media(max-width: 990px) {
+  .header {
+    grid-template-areas: 'logo burger' 'nav nav';
+  }
+
+  .nav {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: none;
+    row-gap: 20px;
+  }
+
+  .nav>a:hover {
+    color: gray;
+  }
+
+  .responsible-header-image {
+    display: block;
+  }
+}
