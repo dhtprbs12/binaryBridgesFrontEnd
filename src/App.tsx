@@ -6,12 +6,7 @@ import Subscription from './components/subscription'
 import Navigation from './components/nav'
 import Footer from './components/footer'
 import Body from './components/body'
-import {
-	ApolloClient,
-	InMemoryCache,
-	ApolloProvider,
-	gql,
-} from '@apollo/client'
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 import { createContext } from 'react'
 import ScriptSuggestion from './components/scriptSuggestion/scriptSuggestion'
 import ScriptCheckout from './components/payment/scriptCheckout'

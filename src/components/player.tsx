@@ -88,6 +88,10 @@ function Player() {
 		)
 	}
 
+	if (data && data.videos?.length <= 0) {
+		return <h1>No Video Uploaded Yet.</h1>
+	}
+
 	if (!isAuthorized) {
 		return <NotAuthorized />
 	}

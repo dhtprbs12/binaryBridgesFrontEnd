@@ -11,14 +11,14 @@ function ThankYou() {
 	const onDocxDownload = async () => {
 		try {
 			const res = await fetch(
-				'http://localhost:4001/download-docx/tech-interview-script'
+				'http://localhost:4001/download-docx/entry-level-behavior'
 			)
 			if (res.ok) {
 				res.blob().then((blob) => {
 					let url = window.URL.createObjectURL(blob)
 					let a = document.createElement('a')
 					a.href = url
-					a.download = 'tech-interview-script.docx'
+					a.download = 'entry-level-behavior-script.docx'
 					a.click()
 				})
 			} else {
