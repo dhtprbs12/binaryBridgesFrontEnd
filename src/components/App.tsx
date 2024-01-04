@@ -15,11 +15,12 @@ import { Elements } from '@stripe/react-stripe-js'
 import { ErrorBoundary } from './shared/errorBoundary'
 import VideoUpload from './videoUpload'
 import stripeApiKey from './stripeApiKey'
-console.log(stripeApiKey)
+import url from './apolloClientUrl'
+
 const stripePromise = loadStripe(stripeApiKey)
 
 const client = new ApolloClient({
-	uri: 'http://localhost:4000/graphql',
+	uri: url,
 	cache: new InMemoryCache(),
 })
 
