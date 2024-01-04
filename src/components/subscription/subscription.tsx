@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import image from '../assets/images/eBook.png'
 import rightArrow from '../assets/images/fast-forward.gif'
 import '../css/subscription.css'
