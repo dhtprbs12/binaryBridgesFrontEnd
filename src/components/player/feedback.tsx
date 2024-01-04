@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 import { VideoProps } from './player'
 import { useMutation } from '@apollo/client'
-import { createFeedbackGql } from './mutation/createFeedback'
+import { createFeedbackGql } from '../mutation/createFeedback'
 import CheckIcon from '@mui/icons-material/Check'
 import GradeIcon from '@mui/icons-material/Grade'
-import { UserContext } from './App'
-import Button from './shared/button'
+import { UserContext } from '../App'
+import Button from '../shared/button'
 
 function Feedback({ currentVideoState }: { currentVideoState: VideoProps }) {
 	const [feedbackScore, setFeedbackScore] = React.useState('0')

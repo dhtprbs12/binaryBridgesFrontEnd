@@ -14,8 +14,9 @@ import { loadStripe } from '@stripe/stripe-js'
 import { Elements } from '@stripe/react-stripe-js'
 import { ErrorBoundary } from './shared/errorBoundary'
 import VideoUpload from './videoUpload'
-
-const stripePromise = loadStripe('pk_test_RTBTQxlT61cJ5uS3h6rc7EOC')
+import stripeApiKey from './stripeApiKey'
+console.log(stripeApiKey)
+const stripePromise = loadStripe(stripeApiKey)
 
 const client = new ApolloClient({
 	uri: 'http://localhost:4000/graphql',
