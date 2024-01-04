@@ -1,14 +1,14 @@
 import React, { useContext } from 'react'
-import image from './eBook.png'
-import rightArrow from './fast-forward.gif'
+import image from './assets/images/eBook.png'
+import rightArrow from './assets/images/fast-forward.gif'
 import './css/subscription.css'
 import { useNavigate } from 'react-router-dom'
 import { useMutation } from '@apollo/client'
-import { startSubscribeGql } from './mutation/startSubscribe'
+import { startSubscribeGql } from '../mutation/startSubscribe'
 
 import StartSubscribe from './startSubscribe'
-import AlreadySubscribed from './alreadySubscribed'
-import { isValidEmail } from './shared/utils'
+import AlreadySubscribed from '../shared/alreadySubscribed'
+import { isValidEmail } from '../shared/utils'
 
 function Subscription() {
 	const history = useNavigate()

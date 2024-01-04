@@ -1,16 +1,16 @@
 import React from 'react'
 import Video from './video'
-import Playlist from './playList/playList'
-import './css/player.css'
+import Playlist from '../playList/playList'
+import '../css/player.css'
 import { useParams } from 'react-router'
 import Feedback from './feedback'
 import useIdleTimeout from './useIdleTimeoutHook'
-import LogoutModal from './player/LogoutModal'
-import NotAuthorized from './player/notAuthorized'
+import NotAuthorized from './notAuthorized'
 import { useNavigate } from 'react-router-dom'
-import { videosGql } from './query/videos'
+import { videosGql } from '../query/videos'
 import { useQuery } from '@apollo/client'
 import CircularProgress from '@mui/material/CircularProgress'
+import LogoutModal from './logoutModal'
 
 export type VideoProps = {
 	id: string

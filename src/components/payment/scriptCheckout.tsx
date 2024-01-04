@@ -1,12 +1,12 @@
 import { Elements } from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'
 import React, { useContext } from 'react'
-import eBook from '../eBook.png'
+import eBook from '../assets/images/eBook.png'
 import ScriptPaymentForm from './scriptPaymentForm'
 import '../css/scriptCheckout.css'
 import { useNavigate, useNavigationType } from 'react-router-dom'
 import { paymentIntent } from './payment-util'
-import { CheckoutContext } from '../../App'
+import { CheckoutContext } from '../App'
 import Skeleton from '@mui/material/Skeleton'
 
 const stripePromise = loadStripe('pk_test_RTBTQxlT61cJ5uS3h6rc7EOC')

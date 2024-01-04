@@ -1,7 +1,7 @@
 import React from 'react'
 import StyledPlaylistItem from '../styles/styledPlayListItem'
 import { Link } from 'react-router-dom'
-import { VideoProps } from '../player'
+import { VideoProps } from '../player/player'
 
 const PlaylistItem = ({
 	video,

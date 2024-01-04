@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import WarningIcon from '@mui/icons-material/Warning'
 import '../css/scriptSuggestion.css'
-import image from '../eBook.png'
-import AlreadySubscribed from '../alreadySubscribed'
-import { CheckoutContext, UserContext } from '../../App'
+import image from '../assets/images/eBook.png'
+import AlreadySubscribed from '../shared/alreadySubscribed'
+import { CheckoutContext, UserContext } from '../App'
 import { useNavigate } from 'react-router-dom'
 import Button from '../shared/button'
 

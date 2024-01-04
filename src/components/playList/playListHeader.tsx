@@ -1,7 +1,7 @@
 import React from 'react'
 import StyledPlaylistHeader from '../styles/styledPlaylistHeader'
 import StyledJourney from '../styles/styledJourney'
-import { VideoProps } from '../player'
+import { VideoProps } from '../player/player'
 
 const PlaylistHeader = ({
 	active,

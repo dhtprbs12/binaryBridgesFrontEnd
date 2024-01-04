@@ -1,8 +1,8 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import AlreadySubscribed from '../alreadySubscribed'
+import AlreadySubscribed from '../shared/alreadySubscribed'
 import Button from '../shared/button'
-import image from '../eBook.png'
+import image from '../assets/images/eBook.png'
 import '../css/thankYou.css'
 
 function ThankYou() {

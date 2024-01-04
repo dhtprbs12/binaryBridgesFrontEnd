@@ -4,7 +4,7 @@ import { useMutation } from '@apollo/client'
 import { createFeedbackGql } from './mutation/createFeedback'
 import CheckIcon from '@mui/icons-material/Check'
 import GradeIcon from '@mui/icons-material/Grade'
-import { UserContext } from '../App'
+import { UserContext } from './App'
 import Button from './shared/button'
 
 function Feedback({ currentVideoState }: { currentVideoState: VideoProps }) {

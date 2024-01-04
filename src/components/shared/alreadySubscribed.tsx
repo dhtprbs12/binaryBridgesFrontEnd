@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
-import './css/alreadySubscribed.css'
-import { verificationGql } from './query/verfication'
+import '../css/alreadySubscribed.css'
+import { verificationGql } from '../query/verfication'
 import { UserContext } from '../App'
 import { useNavigate } from 'react-router-dom'
 import CircularProgress from '@mui/material/CircularProgress'
 import { useLazyQuery } from '@apollo/client'
-import Button from './shared/button'
-import { isValidEmail } from './shared/utils'
+import Button from './button'
+import { isValidEmail } from './utils'
 
 function AlreadySubscribed({
 	setActiveTab,

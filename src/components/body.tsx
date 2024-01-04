@@ -1,6 +1,6 @@
 import React from 'react'
 import './css/body.css'
-import Subscription from './subscription'
+import Subscription from './subscription/subscription'
 
 function Body() {
 	return (

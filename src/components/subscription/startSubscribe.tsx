@@ -1,7 +1,6 @@
 import React from 'react'
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'
-import LoadingButton from '@mui/lab/LoadingButton'
-import Button from './shared/button'
+import Button from '../shared/button'
 
 function StartSubscribe({
 	onInputChange,

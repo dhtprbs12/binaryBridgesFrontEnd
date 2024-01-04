@@ -1,7 +1,7 @@
 import React from 'react'
 import PlaylistHeader from './playListHeader'
 import PlaylistItems from './playListItems'
-import { VideoProps } from '../player'
+import { VideoProps } from '../player/player'
 
 const Playlist = ({
 	videos,

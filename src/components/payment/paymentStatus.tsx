@@ -1,5 +1,5 @@
 import React from 'react'
-import AlreadySubscribed from '../alreadySubscribed'
+import AlreadySubscribed from '../shared/alreadySubscribed'
 import { useStripe } from '@stripe/react-stripe-js'
 import Processing from './processing'
 import RequireOtherPayment from './requireOtherPayment'
