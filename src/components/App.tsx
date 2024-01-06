@@ -16,6 +16,7 @@ import { ErrorBoundary } from './shared/errorBoundary'
 import VideoUpload from './videoUpload'
 import stripeApiKey from './stripeApiKey'
 import url from './apolloClientUrl'
+import Contact from './contact'
 
 const stripePromise = loadStripe(stripeApiKey)
 
@@ -69,6 +70,7 @@ const App = () => {
 								<Routes>
 									<Route path='/' element={<Body />} />
 									<Route path='/tutorials/:id' element={<Player />} />
+									<Route path='/contact' element={<Contact />} />
 									<Route path='/script-offer' element={<ScriptSuggestion />} />
 									<Route path='/script-checkout' element={<ScriptCheckout />} />
 									<Route path='/video-upload' element={<VideoUpload />} />

@@ -106,6 +106,10 @@
   justify-content: space-around;
 }
 
+.check-marks div {
+  display: inline-block;
+}
+
 .check-mark-left ul {
   margin: 0;
   padding: 0;
@@ -120,25 +124,25 @@
 
 .check-mark-left li::before {
   content: '✓';
-  margin-right: 30px;
+  margin-right: 20px;
   color: rgb(206, 46, 46)
 }
 
 .check-mark-right li::before {
   content: '✓';
-  margin-right: 30px;
+  margin-right: 20px;
   color: rgb(206, 46, 46)
 }
 
 .check-mark-left li {
-  font-size: 22px;
+  font-size: 20px;
   padding-bottom: 6px;
   list-style-type: none;
   margin-bottom: 6px;
 }
 
 .check-mark-right li {
-  font-size: 22px;
+  font-size: 20px;
   padding-bottom: 6px;
   list-style-type: none;
   margin-bottom: 6px;

@@ -3,6 +3,9 @@ import './css/body.css'
 import Subscription from './subscription/subscription'
 
 function Body() {
+	React.useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [])
 	return (
 		<div className='body-container'>
 			<div className='body-header'>
@@ -128,8 +131,10 @@ function Body() {
 							<h1>Get The Outcome You're Desired For</h1>
 						</div>
 						<div className='body-box-sub-content'>
-							The Blacktutorials is a fat, no-nonsense ‘get right to the point’
-							compilation of my best Algorithm Secrets...
+							Black tutorials delivers a robust compilation of Algorithm Secrets
+							for the most popular 53 problems, cutting through the fluff with a
+							no-nonsense approach. Get straight to the point and supercharge
+							your understanding!
 							<div>
 								<br />
 							</div>
@@ -154,22 +159,31 @@ function Body() {
 									<ul>
 										<li>
 											<i></i>
-											<b>Unleashing your coding superpowers</b>
+											<div>
+												<b>Unleashing your coding superpowers</b>
+											</div>
 											<br />
 										</li>
 										<li>
 											<i></i>
-											<b>Mastering algorithms without the fluff</b>
+											<div>
+												<b>Mastering algorithms without the fluff</b>
+											</div>
 											<br />
 										</li>
 										<li>
 											<i></i>
-											<b>Turbocharging your coding journey</b>
+											<div>
+												<b>Turbocharging your coding journey</b>
+											</div>
+
 											<br />
 										</li>
 										<li>
 											<i></i>
-											<b>Cutting through the complexity with simplicity</b>
+											<div>
+												<b>Cutting through the complexity with simplicity</b>
+											</div>
 											<br />
 										</li>
 									</ul>
@@ -178,22 +192,30 @@ function Body() {
 									<ul>
 										<li>
 											<i></i>
-											<b>Streamlining problem-solving like a pro</b>
+											<div>
+												<b>Streamlining problem-solving like a pro</b>
+											</div>
 											<br />
 										</li>
 										<li>
 											<i></i>
-											<b>Navigating the coding universe with ease</b>
+											<div>
+												<b>Navigating the coding universe with ease</b>
+											</div>
 											<br />
 										</li>
 										<li>
 											<i></i>
-											<b>Making coding challenges a breeze</b>
+											<div>
+												<b>Making coding challenges a breeze</b>
+											</div>
 											<br />
 										</li>
 										<li>
 											<i></i>
-											<b>Maximizing your coding potential</b>
+											<div>
+												<b>Maximizing your coding potential</b>
+											</div>
 											<br />
 										</li>
 									</ul>

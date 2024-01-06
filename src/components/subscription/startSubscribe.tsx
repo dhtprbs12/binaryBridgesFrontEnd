@@ -66,6 +66,7 @@ function StartSubscribe({
 					</p>
 					<div className='form-control'>
 						<input
+							value={email}
 							type='text'
 							className='input'
 							placeholder='Enter e-mail adress...'

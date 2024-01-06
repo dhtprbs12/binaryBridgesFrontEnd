@@ -108,6 +108,7 @@ function AlreadySubscribed({
 							type='text'
 							className='input'
 							placeholder='Enter the email...'
+							value={email}
 							onChange={({ currentTarget }) => onInputChange(currentTarget)}
 						/>
 						{!!email && noValidEmail && (
@@ -126,6 +127,7 @@ function AlreadySubscribed({
 						<input
 							type='text'
 							className='token-input'
+							value={token}
 							placeholder='Enter the token here...'
 							onChange={({ currentTarget }) => setToken(currentTarget.value)}
 						/>
