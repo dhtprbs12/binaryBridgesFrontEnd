@@ -73,9 +73,8 @@ function Contact() {
 					Your message successully sent!
 				</Alert>
 			</Snackbar>
-			<section id='contact'>
+			<div id='contact'>
 				<h1 className='section-header'>Contact</h1>
-
 				<div className='contact-wrapper'>
 					<div id='contact-form' className='form-horizontal' role='form'>
 						<div className='form-group'>
@@ -141,7 +140,7 @@ function Contact() {
 								)}
 							</div>
 						</div>
-						<div>
+						<div className='form-group'>
 							<textarea
 								className='form-control'
 								rows={10}
@@ -228,7 +227,7 @@ function Contact() {
 						<div className='copyright'>&copy; ALL OF THE RIGHTS RESERVED</div>
 					</div>
 				</div>
-			</section>
+			</div>
 		</div>
 	)
 }

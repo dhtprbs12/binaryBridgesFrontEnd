@@ -3,9 +3,6 @@ import './css/body.css'
 import Subscription from './subscription/subscription'
 
 function Body() {
-	React.useEffect(() => {
-		window.scrollTo(0, 0)
-	}, [])
 	return (
 		<div className='body-container'>
 			<div className='body-header'>

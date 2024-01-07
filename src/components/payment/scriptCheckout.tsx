@@ -8,9 +8,7 @@ import { useNavigate, useNavigationType } from 'react-router-dom'
 import { paymentIntent } from './payment-util'
 import { CheckoutContext } from '../App'
 import Skeleton from '@mui/material/Skeleton'
-import stripeKey from '../stripeApiKey'
-
-const stripePromise = loadStripe(stripeKey)
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_API_KEY || '')
 
 function getAmount(amount: number) {
 	return amount === 1399 ? 13.99 : 23.99

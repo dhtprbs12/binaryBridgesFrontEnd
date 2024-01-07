@@ -25,7 +25,7 @@
 
 /* Left contact page */
 .form-horizontal {
-  max-width: 400px;
+  width: 100%;
   font-weight: 400;
 }
 
@@ -37,8 +37,7 @@
   padding: 12px 18px;
 }
 
-.form-control,
-textarea {
+.form-control{
   max-width: 400px;
   letter-spacing: 1px;
 }
@@ -173,11 +172,6 @@ hr {
     flex-direction: column;
   }
 
-  .direct-contact-container,
-  .form-horizontal {
-    margin: 0 auto;
-  }
-
   .direct-contact-container {
     margin-top: 60px;
     max-width: 300px;
@@ -215,21 +209,15 @@ hr {
 
 @media screen and (max-width: 569px) {
 
-  .direct-contact-container,
-  .form-wrapper {
+  .direct-contact-container {
     float: none;
     margin: 0 auto;
+    padding: 0;
   }
-
-  .form-control,
-  textarea {
-    margin: 0 auto;
-  }
-
 
   .name,
   .email,
-  textarea {
+  .form-control {
     width: 280px;
   }
 
@@ -263,9 +251,10 @@ hr {
     justify-content: center;
   }
   .custom-button {
-    margin-left: 0 !important;
+    margin-left: 0px !important;
+    width: 100% !important;
   }
-  .contact-wrapper{
-    padding: 0;
+  .form-group {
+    /* padding: 10px; */
   }
 }

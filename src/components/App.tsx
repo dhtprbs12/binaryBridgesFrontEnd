@@ -14,14 +14,13 @@ import { loadStripe } from '@stripe/stripe-js'
 import { Elements } from '@stripe/react-stripe-js'
 import { ErrorBoundary } from './shared/errorBoundary'
 import VideoUpload from './videoUpload'
-import stripeApiKey from './stripeApiKey'
-import url from './apolloClientUrl'
 import Contact from './contact'
+import ScrollToTop from './shared/scrollToTop'
 
-const stripePromise = loadStripe(stripeApiKey)
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_API_KEY || '')
 
 const client = new ApolloClient({
-	uri: url,
+	uri: process.env.REACT_APP_APOLLO_CLIENT_URL,
 	cache: new InMemoryCache(),
 })
 
@@ -64,6 +63,7 @@ const App = () => {
 							marginLeft: 'auto',
 						}}
 					>
+						<ScrollToTop />
 						<UserContext.Provider value={userContextValue}>
 							<CheckoutContext.Provider value={checkoutContextValue}>
 								<Navigation />
