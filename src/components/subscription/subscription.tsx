@@ -2,7 +2,6 @@ import React from 'react'
 import image from '../assets/images/eBook.png'
 import rightArrow from '../assets/images/fast-forward.gif'
 import '../css/subscription.css'
-import { useNavigate } from 'react-router-dom'
 import { useMutation } from '@apollo/client'
 import { startSubscribeGql } from '../mutation/startSubscribe'
 
@@ -11,7 +10,6 @@ import AlreadySubscribed from '../shared/alreadySubscribed'
 import { isValidEmail } from '../shared/utils'
 
 function Subscription() {
-	const history = useNavigate()
 	const [email, setEmail] = React.useState<string>('')
 	const [noValidEmail, setNoValidEmail] = React.useState<boolean>(false)
 	const [activeTab, setActiveTab] = React.useState<number>(0)
@@ -36,7 +34,6 @@ function Subscription() {
 	}
 
 	async function onSubscribeClick() {
-		history('/script-offer')
 		await startSubscribe({
 			variables: {
 				email: email?.trim(),

@@ -1,6 +1,8 @@
 import React from 'react'
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'
 import Button from '../shared/button'
+import { Alert, Snackbar } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 
 function StartSubscribe({
 	onInputChange,
@@ -21,9 +23,63 @@ function StartSubscribe({
 	email: string
 	noValidEmail: boolean
 }) {
+	const history = useNavigate()
 	return (
 		<div className='start-subscribe'>
-			{isSubscribed ? (
+			<Snackbar
+				onClose={() => {
+					history('/script-offer')
+					reset()
+				}}
+				open={isSubscribed}
+				autoHideDuration={3000}
+				anchorOrigin={{
+					vertical: 'top',
+					horizontal: 'center',
+				}}
+			>
+				<Alert severity='success' sx={{ width: '100%' }}>
+					The token successully sent to you email!
+				</Alert>
+			</Snackbar>
+			<div>
+				<h1>Free Instant Access!</h1>
+				<p>
+					<b>
+						Enter your best email below and I'll send a token to let you access
+						free "The Algorithm Secrets Black Tutorials!"
+					</b>
+				</p>
+				<div className='form-control'>
+					<input
+						value={email}
+						type='text'
+						className='input'
+						placeholder='Enter e-mail adress...'
+						onChange={({ currentTarget }) => onInputChange(currentTarget)}
+					/>
+					{!!email && noValidEmail && (
+						<h2
+							style={{
+								marginTop: '10px',
+								color: 'red',
+								textAlign: 'left',
+							}}
+						>
+							Provide a valid email
+						</h2>
+					)}
+					<div className='button-container'>
+						<Button
+							text='Subscribe'
+							loading={loading}
+							disabled={loading || !email || noValidEmail || isSubscribed}
+							onClick={onSubscribeClick}
+						/>
+					</div>
+				</div>
+			</div>
+			{/* {isSubscribed ? (
 				<div>
 					<div
 						style={{ display: 'inline-block', width: '100px', height: '100px' }}
@@ -93,7 +149,7 @@ function StartSubscribe({
 						</div>
 					</div>
 				</div>
-			)}
+			)} */}
 		</div>
 	)
 }

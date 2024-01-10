@@ -35,7 +35,7 @@ function ScriptSuggestion() {
 						</h1>
 					</div>
 					<div className='warning-content'>
-						<h1>Before You Watch The 'Algorithm Secret Blackvideo'...</h1>
+						<h1>Before You Watch The 'Algorithm Secret Black Tutorials'...</h1>
 						<h3>
 							You're only going to see this page <u>once</u> (ever), so please
 							read every word very carefully. It's really that important...
