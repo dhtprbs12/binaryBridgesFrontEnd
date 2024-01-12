@@ -20,7 +20,7 @@ import ScrollToTop from './shared/scrollToTop'
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_API_KEY || '')
 
 const client = new ApolloClient({
-	uri: 'graphql',
+	uri: process.env.REACT_APP_APOLLO_CLIENT_URL,
 	cache: new InMemoryCache(),
 })
 
