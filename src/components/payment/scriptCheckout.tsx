@@ -35,7 +35,7 @@ function ScriptCheckout() {
 		if (amount > 0) {
 			try {
 				paymentIntent(
-					'http://localhost:4001/create-payment-intent',
+					`${process.env.REACT_APP_EXPRESS_SERVER_URL}/create-payment-intent`,
 					amount
 				).then((secret) => setClientSecret(secret))
 			} catch (e) {

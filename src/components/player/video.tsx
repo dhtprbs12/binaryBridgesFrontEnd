@@ -7,7 +7,7 @@ const Video = ({ videoFileName }: { videoFileName: string }) => (
 			width='100%'
 			height='100%'
 			controls={true}
-			url={`http://localhost:4001/video/${videoFileName}`}
+			url={`${process.env.REACT_APP_EXPRESS_SERVER_URL}/video/${videoFileName}`}
 		/>
 	</div>
 )

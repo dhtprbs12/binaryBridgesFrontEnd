@@ -11,7 +11,7 @@ function ThankYou() {
 	const onDocxDownload = async () => {
 		try {
 			const res = await fetch(
-				'http://localhost:4001/download-docx/entry-level-behavior'
+				`${process.env.REACT_APP_EXPRESS_SERVER_URL}/download-docx/entry-level-behavior`
 			)
 			if (res.ok) {
 				res.blob().then((blob) => {

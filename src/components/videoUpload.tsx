@@ -45,7 +45,7 @@ function VideoUpload() {
 			formData.append('takeaways', takeaways)
 			formData.append('duration', duration)
 			formData.append('sequence', sequence)
-			fetch('http://localhost:4001/upload-video', {
+			fetch(`${process.env.REACT_APP_EXPRESS_SERVER_URL}/upload-video`, {
 				method: 'POST',
 				body: formData,
 			})
