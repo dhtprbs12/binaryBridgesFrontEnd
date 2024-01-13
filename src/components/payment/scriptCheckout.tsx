@@ -1,7 +1,8 @@
 import { Elements } from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'
 import React, { useContext } from 'react'
-import eBook from '../assets/images/eBook.png'
+import freshman from '../assets/images/freshman-cover.png'
+import experience from '../assets/images/experience-cover.png'
 import ScriptPaymentForm from './scriptPaymentForm'
 import '../css/scriptCheckout.css'
 import { useNavigate, useNavigationType } from 'react-router-dom'
@@ -47,9 +48,12 @@ function ScriptCheckout() {
 	return (
 		<div className='script-checkout-container'>
 			<div className='script-product'>
-				<img src={eBook} />
+				<img
+					className='script-checkout-cover'
+					src={amount === 1399 ? freshman : experience}
+				/>
 				<p>
-					<u>Entry Level Script</u>
+					<u>{amount === 1399 ? 'Freshman Script' : 'Experienced Script'}</u>
 				</p>
 			</div>
 			<div className='checkout-form'>

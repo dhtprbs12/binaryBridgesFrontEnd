@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import AlreadySubscribed from '../shared/alreadySubscribed'
 import Button from '../shared/button'
-import image from '../assets/images/eBook.png'
+import freshman from '../assets/images/freshman-cover.png'
+import experience from '../assets/images/experience-cover.png'
 import '../css/thankYou.css'
+import { CheckoutContext } from '../App'
 
 function ThankYou() {
 	const navigate = useNavigate()
 	const [error, setError] = React.useState<string>()
+	const { amount } = useContext(CheckoutContext)
 	const onDocxDownload = async () => {
 		try {
 			const res = await fetch(
@@ -41,7 +44,10 @@ function ThankYou() {
 				Download Button.
 			</h1>
 			<div className='download-container'>
-				<img src={image} />
+				<img
+					className='thank-you-image'
+					src={amount === 1399 ? freshman : experience}
+				/>
 				<Button text='DOWNLOAD' loading={false} onClick={onDocxDownload} />
 			</div>
 			<h1>Now, Time To Crack the Algorigthm Secret Tutorials..</h1>

@@ -52,10 +52,15 @@ function Subscription() {
 		<div className='subscription-container'>
 			<div className='subscription-body'>
 				<div className='subscription-body-image'>
-					<img src={image} alt='eBook.png' />
+					<img className='eBook' src={image} alt='eBook.png' />
 				</div>
 				<div className='subscription-body-next'>
-					<img src={rightArrow} alt='rightArrow' height={300} />
+					<img
+						className='rightArrow'
+						src={rightArrow}
+						alt='rightArrow'
+						height={300}
+					/>
 				</div>
 				<div className='subscription-body-form'>
 					<div className='box'>

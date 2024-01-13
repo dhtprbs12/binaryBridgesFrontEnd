@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
 import WarningIcon from '@mui/icons-material/Warning'
 import '../css/scriptSuggestion.css'
-import image from '../assets/images/eBook.png'
+import freshman from '../assets/images/freshman-cover.png'
+import experience from '../assets/images/experience-cover.png'
 import AlreadySubscribed from '../shared/alreadySubscribed'
-import { CheckoutContext, UserContext } from '../App'
+import { CheckoutContext } from '../App'
 import { useNavigate } from 'react-router-dom'
 import Button from '../shared/button'
 
@@ -47,7 +48,7 @@ function ScriptSuggestion() {
 				<div className='script-one'>
 					<h1>Just Graduated?</h1>
 					<p>Just $13.99</p>
-					<img src={image} />
+					<img className='freshman-cover' src={freshman} />
 					<Button
 						onClick={() => {
 							setAmount(1399)
@@ -64,7 +65,7 @@ function ScriptSuggestion() {
 				<div className='script-two'>
 					<h1>Experienced?</h1>
 					<p>Just $23.99</p>
-					<img src={image} />
+					<img className='experience-cover' src={experience} />
 					<Button
 						onClick={() => {
 							setAmount(2399)

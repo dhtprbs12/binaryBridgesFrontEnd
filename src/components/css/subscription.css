@@ -108,9 +108,15 @@
   color: #ffffff;
 }
 
-img {
+.eBook, .rightArrow {
   width: 100%;
   height: auto;
+}
+
+.freshman-cover, .experience-cover {
+  margin-bottom: 20px;
+  width: 300px !important;
+  height: 500px;
 }
 
 .start-subscribe h1 {

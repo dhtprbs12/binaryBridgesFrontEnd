@@ -208,7 +208,7 @@ function Contact() {
 								<EmailIcon />
 								<span className='contact-text gmail'>
 									<a href='mailto:#' title='Send me an email'>
-										hitmeup@gmail.com
+										binarybridgeonline@gmail.com
 									</a>
 								</span>
 							</li>

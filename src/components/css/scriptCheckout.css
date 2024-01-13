@@ -12,7 +12,12 @@
 
 .script-product {
   width: 40%;
-  margin-right: 20px;
+  margin: 0 auto;
+}
+
+.script-checkout-cover {
+  width: 250px;
+  height: 450px;
 }
 
 .script-product p {

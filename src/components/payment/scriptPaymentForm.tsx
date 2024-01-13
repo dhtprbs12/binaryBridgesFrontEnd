@@ -22,7 +22,7 @@ function ScriptPaymentForm({ clientSecret }: { clientSecret: string }) {
 			elements,
 			confirmParams: {
 				// redirect to route thankyou
-				return_url: 'http://localhost:3000/payment-status',
+				return_url: `${process.env.REACT_APP_HOST}/payment-status`,
 			},
 		})
 
